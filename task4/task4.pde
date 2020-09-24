@@ -34,5 +34,13 @@ void printNumber (int i) {
 
 // 4e
 void fibunacciSequence(int a, int b) {
-  println(a + "\t" + b);
+  println(a +"\t"+ b);
+  if (a >= 10000) {
+    return;
+  } else {
+    int temp = a;
+    a += a;
+    b = temp;
+    fibunacciSequence(a, b);
+  }
 }
